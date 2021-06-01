@@ -14,6 +14,13 @@ const imagemin = require("gulp-imagemin");
 const newer = require("gulp-newer");
 const del = require("del");
 
+const buildPath = {
+  html: "dist/",
+  js: "dist/js/",
+  css: "dist/css/",
+  image: "dist/images",
+};
+
 function browsersync() {
   browserSync.init({
     server: { baseDir: "dist/" },
@@ -26,7 +33,7 @@ function html() {
   return src("app/*.html")
     .pipe(rigger())
     .pipe(htmlmin())
-    .pipe(dest("dist/"))
+    .pipe(dest(buildPath.html))
     .pipe(browserSync.stream());
 }
 
@@ -37,7 +44,7 @@ function scripts() {
   ])
     .pipe(concat("app.min.js"))
     .pipe(uglify())
-    .pipe(dest("dist/js/"))
+    .pipe(dest(buildPath.js))
     .pipe(browserSync.stream());
 }
 
@@ -65,19 +72,19 @@ function styles() {
         level: { 1: { specialComments: 0 } } /* , format: 'beautify' */,
       })
     )
-    .pipe(dest("dist/css/"))
+    .pipe(dest(buildPath.css))
     .pipe(browserSync.stream());
 }
 
 function images() {
   return src("app/images/**/*")
-    .pipe(newer("dist/images"))
+    .pipe(newer(buildPath.images))
     .pipe(imagemin())
-    .pipe(dest("dist/images"));
+    .pipe(dest(buildPath.images));
 }
 
 function cleanimg() {
-  return del("dist/images/**/*", { force: true });
+  return del(`${buildPath.images}/**/*`, { force: true });
 }
 
 function cleandist() {
