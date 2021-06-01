@@ -1,0 +1,70 @@
+@charset "UTF-8";
+// Font
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600&subset=cyrillic");
+
+%font-family {
+  font-family: "Open Sans", sans-serif;
+}
+
+// Colors
+$bg: #ffffff;
+$bg1: #f2f2f2;
+$bg2: #e5e5e5;
+
+$line: #e5e5e5;
+
+$text: #333333;
+$text2: #808080;
+$text3: #a0a0a0;
+
+$link: #3072c4;
+$link-bg: #e4f3ff;
+$link-btn: #5199db;
+
+$green: #228007;
+$green-bg: #e2f7dc;
+$green-btn: #3f9726;
+
+$red: #ce0014;
+$red-bg: #ffd6d6;
+$red-btn: #d70c17;
+
+$accent: #d97e00;
+$accent-bg: #fff0bc;
+$accent-btn: #f69c00;
+
+// Media
+$xs: 575px;
+$sm: 767px;
+$md: 991px;
+$lg: 1199px;
+//@media screen and (max-width: $md)
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+// Example: @include transition(color .3s ease);
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+// Examlpe: @include opacity(0.8);
+
+%clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+// Example: @extend %clearfix;
