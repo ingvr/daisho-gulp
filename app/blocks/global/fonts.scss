@@ -1,47 +1,49 @@
 @font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-300-Light.ttf") format("truetype"),
-    url("../fonts/Jost-300-Light.otf") format("opentype");
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Light.ttf") format("truetype"),
+    url("../fonts/Manrope-Light.otf") format("opentype"),
+    url("../fonts/Manrope-Light.woff") format("woff"),
+    url("../fonts/Manrope-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-400-Book.ttf") format("truetype"),
-    url("../fonts/Jost-400-Book.otf") format("opentype");
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Regular.ttf") format("truetype"),
+    url("../fonts/Manrope-Regular.otf") format("opentype"),
+    url("../fonts/Manrope-Regular.woff") format("woff"),
+    url("../fonts/Manrope-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-400-BookItalic.ttf") format("truetype"),
-    url("../fonts/Jost-400-BookItalic.otf") format("opentype");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-500-Medium.ttf") format("truetype"),
-    url("../fonts/Jost-500-Medium.otf") format("opentype");
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Medium.ttf") format("truetype"),
+    url("../fonts/Manrope-Medium.otf") format("opentype"),
+    url("../fonts/Manrope-Medium.woff") format("woff"),
+    url("../fonts/Manrope-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-600-Semi.ttf") format("truetype"),
-    url("../fonts/Jost-600-Semi.otf") format("opentype");
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-SemiBold.ttf") format("truetype"),
+    url("../fonts/Manrope-SemiBold.otf") format("opentype"),
+    url("../fonts/Manrope-SemiBold.woff") format("woff"),
+    url("../fonts/Manrope-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Jost";
-  src: url("../fonts/Jost-800-Hevy.ttf") format("truetype"),
-    url("../fonts/Jost-800-Hevy.otf") format("opentype");
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Bold.ttf") format("truetype"),
+    url("../fonts/Manrope-Bold.otf") format("opentype"),
+    url("../fonts/Manrope-Bold.woff") format("woff"),
+    url("../fonts/Manrope-Bold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
 }
