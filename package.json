@@ -20,6 +20,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.14",
     "del": "^6.0.0",
+    "eslint": "^7.29.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
