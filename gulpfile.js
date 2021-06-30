@@ -54,6 +54,7 @@ function styles() {
   return src(
     [
       "node_modules/normalize-scss/sass/_normalize.scss",
+      "node_modules/bootstrap/scss/bootstrap.scss",
       "app/blocks/global/fonts.scss",
       "app/blocks/global/variables.scss",
       "app/blocks/**/*.scss",
