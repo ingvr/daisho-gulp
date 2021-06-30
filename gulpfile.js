@@ -7,11 +7,10 @@ const htmlmin = require("gulp-htmlmin");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify-es").default;
 const importify = require("gulp-importify");
-const sass = require("gulp-sass");
+const sass = require("gulp-sass"); // eslint-disable-line
 const autoprefixer = require("gulp-autoprefixer");
 const cleancss = require("gulp-clean-css");
 const imagemin = require("gulp-imagemin");
-const newer = require("gulp-newer");
 const del = require("del");
 const flatten = require("gulp-flatten");
 
@@ -19,7 +18,7 @@ const buildPath = {
   html: "dist/",
   js: "dist/js/",
   css: "dist/css/",
-  image: "dist/images",
+  images: "dist/images",
   fonts: "dist/fonts",
 };
 
@@ -82,7 +81,7 @@ function styles() {
 
 function images() {
   return src("app/images/**/*")
-    .pipe(newer(buildPath.images))
+    .pipe(flatten())
     .pipe(imagemin())
     .pipe(dest(buildPath.images));
 }

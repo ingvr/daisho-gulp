@@ -29,7 +29,6 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-importify": "^0.0.7",
-    "gulp-newer": "^1.4.0",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^4.1.0",
     "gulp-uglify-es": "^2.0.0"
