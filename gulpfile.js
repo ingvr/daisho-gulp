@@ -51,7 +51,7 @@ function scripts() {
 function styles() {
   return src(
     [
-      "bower_components/normalize-scss/_normalize.scss",
+      "node_modules/normalize-scss/sass/_normalize.scss",
       "app/blocks/global/variables.scss",
       "app/blocks/**/*.scss",
     ],
