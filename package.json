@@ -27,13 +27,13 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-newer": "^1.4.0",
     "gulp-sass": "^4.1.0",
-    "gulp-uglify-es": "^2.0.0"
+    "gulp-uglify-es": "^2.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-importify": "^0.0.7",
+    "gulp-rigger": "^0.5.8"
   },
   "dependencies": {
     "bootstrap": "^5.0.1",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-importify": "^0.0.7",
-    "gulp-rigger": "^0.5.8",
     "normalize-scss": "^7.0.1"
   }
 }
