@@ -101,7 +101,7 @@ function cleandist() {
 function startwatch() {
   watch(["app/blocks/**/*.js"], scripts);
   watch(["app/blocks/**/*.scss"], styles);
-  watch("app/**/*.html").on("change", browserSync.reload);
+  watch(["app/**/*.html"], html);
   watch("app/images/**/*", images);
   watch("app/fonts/*/*", fonts);
 }
