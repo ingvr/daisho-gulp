@@ -13,12 +13,14 @@ const cleancss = require("gulp-clean-css");
 const imagemin = require("gulp-imagemin");
 const newer = require("gulp-newer");
 const del = require("del");
+const flatten = require("gulp-flatten");
 
 const buildPath = {
   html: "dist/",
   js: "dist/js/",
   css: "dist/css/",
   image: "dist/images",
+  fonts: "dist/fonts",
 };
 
 function browsersync() {
@@ -52,6 +54,7 @@ function styles() {
   return src(
     [
       "node_modules/normalize-scss/sass/_normalize.scss",
+      "app/blocks/global/fonts.scss",
       "app/blocks/global/variables.scss",
       "app/blocks/**/*.scss",
     ],
@@ -83,6 +86,10 @@ function images() {
     .pipe(dest(buildPath.images));
 }
 
+function fonts() {
+  return src("app/fonts/**/*").pipe(flatten()).pipe(dest(buildPath.fonts));
+}
+
 function cleanimg() {
   return del(`${buildPath.images}/**/*`, { force: true });
 }
@@ -96,6 +103,7 @@ function startwatch() {
   watch(["app/blocks/**/*.scss"], styles);
   watch("app/**/*.html").on("change", browserSync.reload);
   watch("app/images/**/*", images);
+  watch("app/fonts/*/*", fonts);
 }
 
 exports.browsersync = browsersync;
@@ -103,8 +111,16 @@ exports.html = html;
 exports.scripts = scripts;
 exports.styles = styles;
 exports.images = images;
+exports.fonts = fonts;
 exports.cleanimg = cleanimg;
 
-exports.build = series(cleandist, html, styles, scripts, images);
+exports.build = series(cleandist, html, styles, scripts, images, fonts);
 
-exports.default = parallel(html, styles, scripts, browsersync, startwatch);
+exports.default = parallel(
+  html,
+  styles,
+  scripts,
+  fonts,
+  browsersync,
+  startwatch
+);
