@@ -80,10 +80,7 @@ function styles() {
 }
 
 function images() {
-  return src("app/images/**/*")
-    .pipe(flatten())
-    .pipe(imagemin())
-    .pipe(dest(buildPath.images));
+  return src("app/images/**/*").pipe(imagemin()).pipe(dest(buildPath.images));
 }
 
 function fonts() {
